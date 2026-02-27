@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .form-fields{
+            margin: 20px;
+        }
+        label{
+            font-size: 20px;
+            font-weight: bold;
+        }
+        input,textarea,select{
+            width: 100%;
+            padding: 10px;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Registration form
+    </h1>
+    <form>
+        <div class="form-fields">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name">
+        </div>
+        
+        <div class="form-fields">
+            <label for="phone no">Phone number:</label>
+            <input type="tel" name="phone no" id="phone no">
+        </div>
+
+        <div class="form-fields">
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password">
+        </div>
+
+        <div class="form-fields">
+            <label for="address">Address:</label>
+            <textarea rows="10" cols="20" name="address" id="address"></textarea>
+        </div>
+
+        <div class="form-fields">
+            <label for="Gender">Gender:</label>
+            <input type="radio" name="gender" id="male" value="male">
+            <label for="male">male</label>
+            <input type="radio" name="gender" id="female" value="female">
+            <label for="female">female</label>
+        </div>
+
+        <div class="form-fields">
+            <label for="Subjects">Subjects:</label>
+            
+            <input type="checkbox" name="subjects" id="physics" value="physics">
+            <label for="physics">Physics</label>
+            <input type="checkbox" name="subjects" id="Chemistry" value="Chemistry">
+            <label for="Chemistry">Chemistry</label>
+            <input type="checkbox" name="subjects" id="Maths" value="Maths">
+            <label for="Maths">Maths</label>
+            <input type="checkbox" name="subjects" id="Biology" value="Biology">
+            <label for="Biology">Biology</label> 
+        </div>
+
+        <div class="form-fields">
+            <label for="Mode of travelling">Mode of travelling:</label>
+            <select name="Mode of travelling" id="Mode of travelling">
+                <option value="">Select your option</option>
+                <option value="Bus">Bus</option>
+                <option value="Van">Van</option>
+                <option value="Bike">Bike</option>
+                <option value="Car">Car</option>
+                <option value="Metro">Metro</option>
+                
+            </select>
+        </div>
+
+        <div class="form-fields">
+            <input type="Reset" name="Reset" id="Reset">
+            <input type="Submit" name="Submit" id="Submit">
+        </div>
+
+
+        
+
+
+
+
+
+
+    </form>
+</body>
+</html>

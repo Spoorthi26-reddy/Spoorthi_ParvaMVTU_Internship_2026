@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            font-size: 20px;
+        }
+        li:first-child{
+            color: blue;
+            
+        }
+        li:last-child{
+            color: brown;
+            
+        }
+        li:nth-child(4){
+            color: rgb(16, 217, 224);
+        }
+        li:nth-child(2n){
+            color: chartreuse;
+        }
+        li:nth-child(2n+1){
+            color: blueviolet;
+        }
+        li:nth-child(3n){
+            color: brown;
+        }
+        h1::first-letter{
+            color: red;
+
+        }
+        h1:first-of-type{
+            background-color: black;
+            color: aliceblue;
+        }
+        h1:last-of-type{
+            background-color: yellow;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>List items</h1>
+    <ul>
+        <li>list-1</li>
+        <li>list-2</li>
+        <li>list-3</li>
+        <li>list-4</li>
+        <li>list-5</li>
+        <li>list-6</li>
+        <li>list-7</li>
+        <li>list-8</li>
+        <li>list-9</li>
+        <li>list-10</li>
+    </ul>
+
+    <div>
+        <h2>heading2</h2>
+        <h1>heading within div</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, commodi.</p>
+    
+    
+    <h1>heading2 between other tgs</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim, placeat.</p>
+    </div>
+    
+    
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Registration form</h3>
+
+<form id="form">
+
+Name:
+<input type="text" id="name"><br><br>
+
+Email:
+<input type="text" id="email"><br><br>
+
+Phone:
+<input type="text" id="phone"><br><br>
+
+<button onclick="showData()">Submit</button>
+
+</form>
+
+<script>
+
+let students = [];
+
+function showData(){
+
+event.preventDefault();
+
+let name = document.getElementById("name").value;
+let email = document.getElementById("email").value;
+let phone = document.getElementById("phone").value;
+
+students.push({
+Name: name,
+Email: email,
+Phone: phone
+});
+
+console.table(students);
+
+}
+
+</script>
+
+</body>
+</html>

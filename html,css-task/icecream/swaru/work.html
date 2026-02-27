@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Discipline Developer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg,#0f0f0f,#1a1a2e);
+    color:#fff;
+    overflow-x:hidden;
+}
+
+header{
+    padding:20px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.05);
+    position:sticky;
+    top:0;
+}
+
+header h1{
+    font-size:18px;
+    letter-spacing:2px;
+    font-weight:600;
+}
+
+.hero{
+    height:90vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero h2{
+    font-size:48px;
+    background: linear-gradient(90deg,#ff4d4d,#ff0000,#ff4d4d);
+    -webkit-background-clip:text;
+    color:transparent;
+    margin-bottom:20px;
+}
+
+.hero p{
+    color:#ccc;
+    margin-bottom:30px;
+    font-size:18px;
+}
+
+.btn{
+    padding:12px 30px;
+    border-radius:30px;
+    border:none;
+    cursor:pointer;
+    margin:10px;
+    font-weight:600;
+    transition:0.3s ease;
+}
+
+.primary{
+    background:linear-gradient(45deg,#ff0000,#ff4d4d);
+    color:#fff;
+}
+
+.primary:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 20px rgba(255,0,0,0.5);
+}
+
+.secondary{
+    background:transparent;
+    border:1px solid #ff4d4d;
+    color:#ff4d4d;
+}
+
+.secondary:hover{
+    background:#ff4d4d;
+    color:#fff;
+}
+
+.section{
+    padding:80px 20px;
+    max-width:1100px;
+    margin:auto;
+    text-align:center;
+}
+
+.section h3{
+    font-size:32px;
+    margin-bottom:40px;
+}
+
+.cards{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:30px;
+}
+
+.card{
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(15px);
+    padding:30px;
+    width:300px;
+    border-radius:20px;
+    transition:0.3s ease;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 40px rgba(0,0,0,0.5);
+}
+
+.price{
+    font-size:24px;
+    color:#ff4d4d;
+    margin:15px 0;
+}
+
+.footer{
+    text-align:center;
+    padding:40px;
+    color:#aaa;
+}
+
+@media(max-width:768px){
+    .hero h2{
+        font-size:32px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>DISCIPLINE DEVELOPER</h1>
+</header>
+
+<section class="hero">
+    <h2>Build Your Body. Build Your Income.</h2>
+    <p>Frontend Developer | 5AM Runner | Discipline Athlete</p>
+    <button class="btn primary" onclick="window.location.href='https://wa.me/917899058019'">
+        Get My Plan
+    </button>
+    <button class="btn secondary" onclick="window.location.href='https://instagram.com/swaran.05'">
+        Follow Journey
+    </button>
+</section>
+
+<section class="section">
+    <h3>Who Am I?</h3>
+    <p>
+        I am a 22-year-old frontend developer building discipline in body and income.
+        5AM runs. Daily coding. Night gym sessions.
+        I believe consistency beats motivation.
+    </p>
+</section>
+
+<section class="section">
+    <h3>My Programs</h3>
+
+    <div class="cards">
+
+        <div class="card">
+            <h4>Fat Loss Plan</h4>
+            <div class="price">₹499</div>
+            <p>4-week structured plan with simple meals and support.</p>
+            <button class="btn primary"
+                onclick="window.location.href='https://wa.me/917899058019'">
+                Buy Now
+            </button>
+        </div>
+
+        <div class="card">
+            <h4>Home Workout</h4>
+            <div class="price">₹299</div>
+            <p>No equipment. Beginner friendly. 5-day routine.</p>
+            <button class="btn primary"
+                onclick="window.location.href='https://wa.me/917899058019'">
+                Buy Now
+            </button>
+        </div>
+
+        <div class="card">
+            <h4>1-on-1 Coaching</h4>
+            <div class="price">₹999</div>
+            <p>Custom guidance + weekly check-ins.</p>
+            <button class="btn primary"
+                onclick="window.location.href='https://wa.me/917899058019'">
+                Start Now
+            </button>
+        </div>
+
+    </div>
+</section>
+
+<div class="footer">
+© 2026 Discipline Developer | Built With Consistency
+</div>
+
+</body>
+</html>

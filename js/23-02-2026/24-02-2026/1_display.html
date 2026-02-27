@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Display methods</h1>
+    <p>1.innerText</p>
+    <p>2.innerHtml</p>
+    <div id="container">
+
+    </div>
+    <button id="innerTextBtn">Innertext</button>
+    <button id="innerHtmlBtn">InnerHtml</button>
+
+    <script>
+        const innerTextBtn=document.getElementById('innerTextBtn');
+        const innerHtmlBtn=document.getElementById('innerHtmlBtn');
+        const container = document.getElementById('container');
+        innerTextBtn.addEventListener('click', () => {
+        container.innerText = "<h1>This is InnerText</h1>";
+        });
+        innerHtmlBtn.addEventListener('click', () => {
+        container.innerText = "<h1>This is InnerHtml</h1>";
+        });
+
+    </script>
+//take useer input values-display the greatest number among 3 numbers
+//to check number is even or odd
+//to check weather the number is multiple of 5 or not
+//for while and do while loop
+    
+</body>
+</html>

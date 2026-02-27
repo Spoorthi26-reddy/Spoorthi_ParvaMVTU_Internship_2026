@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #child{
+            text-align: center;
+        }
+        #btn{
+            padding: 10px 20px;
+            border-radius: 5px;
+            outline: none;
+            border: none;
+            background: linear-gradient(90deg,rgba(42, 155, 149, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%); ;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="child">
+        <h3 id="color_code">Background color is:</h3>
+        <button id="btn" onclick="handleClick()">Change BG</button>
+        </div>
+    </div>
+
+    <script>
+        function getBackground() {
+            const red = Math.floor(Math.random() * 256);
+            const green = Math.floor(Math.random() * 256);
+            const blue = Math.floor(Math.random() * 256);
+            const rgb =`rgb(${red},${green},${blue})`;
+            return rgb;
+        }
+
+        function handleClick() {
+            const color = getBackground();
+            const con = document.getElementById("container");
+            con.style.backgroundColor = color;
+            const colorCode = document.getElementById("color_code");
+            colorCode.innerText = `Background Color is: ${color}`;
+        }
+    </script>
+</body>
+</html>

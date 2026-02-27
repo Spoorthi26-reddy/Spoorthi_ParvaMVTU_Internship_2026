@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table,tr,th,td{
+        border: 1px solid black;
+    }
+    h1{
+        color: deeppink;
+        background-color: bisque;
+        margin:20px;
+        padding:10px;
+        text-align: center;
+        
+    }
+    h2{
+        color:blue;
+        background-color: aquamarine;
+
+    }
+    .head{
+        color: brown;
+        background-color: bisque;
+    }
+    .head2{
+        color: aqua;
+        background-color: blueviolet;
+        font-family: Roboto;
+    }
+    form{
+        border:2px solid black;
+        padding:50px 40px;
+        margin:30px;
+        background-color: aquamarine;
+    }
+    b{
+        color:red;
+    }
+    .haa{
+        color:chartreuse;
+    }
+    .hii{
+        color:darkgreen;
+    }
+    @font-face {
+        font-family: "Roboto";
+        src: url(../Frontend/css/fonts/Roboto_Mono/RobotoMono-Italic-VariableFont_wght.ttf);
+    }
+    p{
+        font-family: Roboto;
+    }
+</style>
+<body>
+    <nav type="none">
+        <li>Home</li>
+        <li>About Us</li>
+        <li>Services</li>
+        <li>Contacu us</li>
+
+    </nav>
+
+    <br>
+    <figure>
+        <img src="../Frontend/html/media/bmw.jpg" height="100">
+    </figure>
+    <section>
+        
+    <h1>CAMBRIDGE INSTITUTE OF TECHNOLOGY-NORTH CAMPUS</h1>
+        
+        <h2><u>Welcome to CITNC</u></h2>
+        <p>Welcome to Cambridge institute of technology, a premier institution dedicated to academic excellence and for its innovation.</p>
+        
+        <p><b>Short Introduction:</b></p>
+        <p>CIT provides quality education,modern infracture, and industry-focused learning to shape future professionals.</p>
+
+        <p><b>Vision of CITNC:</b></p>
+        <p>To become the center of excellence in technical education and research.</p>
+
+        <p><b>Mission:</b></p>
+        <ul>
+            <li>Provide quality education</li>
+            <li>Encourage innovation and creativity</li>
+            <li>Develop ethical and skilled professionals</li>
+        </ul>
+        </section>
+        <br>
+        <section>
+            <h2 class="head"><u>About the College</u></h2>
+            <p><b class="haa">Year of Establishment:</b>2003</p>
+
+            <p><b class="haa">History:</b></p>
+            <p>CIT was established with the aim of delivering world classeducation in engineering and technology.Over the years it has grown into a reputed institution with strong academic foundations.</p>
+            
+            <p><b class="haa">Founders message:</b></p>
+            <p>"Education is the most powerful tool used to shape the future.Our goal is to nurture the young minds into responsible professionals."</p>
+            
+            <p><b class="haa">Achievements and Recognitions:</b></p>
+            <ul>
+                <li>Ranked among top engineering colleges in the state</li>
+                <li>Awarded for excellence in technical education</li>
+                <li>Strong placement record</li>
+            </ul>
+        </section>
+        <br>
+
+        <section>
+            <h2 class="head2"><u>Departments and Academics</u></h2>
+            <p><b class="hii">Departments offered:</b></p>
+            <ul>
+                <li>Computer Science and Engineering</li>
+                <li>Information Science and Engineering </li>
+                <li>Civil Engineering</li>
+                <li>Electronics and communication Engineering</li>
+                <li>Mechanical Engineering</li>
+            </ul>
+
+            <p><b class="hii">Facilities Available:</b></p>
+            <ul>
+                <li>Digital library</li>
+                <li>computer labs</li>
+                <li>Smart classrooms</li>
+                <li>Sports complex</li>
+            </ul>
+
+            <p><b class="hii">Fcaulty Details:</b></p>
+            <table>
+                <tr>
+                    <th>Faculty Name</th>
+                    <th>Department</th>
+                    <th>Designation</th>
+                </tr>
+
+                <tr>
+                    <td>Dr.Ram</td>
+                    <td>CSE</td>
+                    <td>Professor</td>
+                </tr>
+                <tr>
+                    <td>Ravina</td>
+                    <td>ISE</td>
+                    <td>Asst.Professor</td>
+                </tr>
+                <tr>
+                    <td>Dr.Damodar</td>
+                    <td>CSE</td>
+                    <td>HOD</td>
+                </tr>
+            </table>
+        </section>
+        <br>
+        <section>
+            <h2><u>Admission Information</u></h2>
+            <p>Admission Enquiry Form:</p>
+            <form method="post" action="">
+
+            <label for="student name">Student Name:</label>
+            <input type="text" name="student name" id="student name" placeholder="Enter your name">
+            <br><br>
+
+            <label for="email">Email:</label>
+        `   <input type="email" name="email" id="email" placeholder="Enter your email">
+            <br><br>
+
+            <label for="ph no">Phone number:</label>
+            <input type="number" name="ph no" id="ph no"   placeholder="Enter your phone number">
+            <br><br>
+
+            <label for="course">Course selection:</label>
+    <select name="course" id="course" multiple>
+            <option value="CSE">Computer science and Engineering</option>
+            <option value="ISE">Information science and Engineering</option>
+            <option value="ME" selected>Mechanical Engineering</option>
+            <option value="CE">Civil Engineering</option>
+            <option value="EEE">Electronics and communication Engineering </option>
+        </select><br><br>
+
+        <label for="gender">Gender:</label>
+        <input type="radio" name="gender" id="male" value="male">
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="female" value="female">
+        <label for="male">Female</label>
+        <input type="radio" name="gender" id="other" value="other">
+        <label for="male">Other</label>
+        <br><br>
+
+        <label for="skills/interests">Skills/Interests:</label>
+        <input type="checkbox" name="skills/interests" id="programming" value="programming">
+        <label for="singing">Singing</label>
+        <input type="checkbox" name="skills/interests" id="design" value="design">
+        <label for="singing">Dancing</label>
+        <input type="checkbox" name="skills/interests" id="sports" value="sports">
+        <label for="singing">Travelling</label>
+        <br><br>
+
+        <label for="doa">Date of Application:</label>
+        <input type="date" name="doa" id="doa" min="2026-01-01" max="2026-03-01">
+        <br><br>
+
+        <input type="reset" name="reset" id="reset">
+        <input type="submit" name="submit" id="submit">
+        </form>
+        </section>
+        <br>
+
+        <section>
+            <h2><u>Campus Gallery</u></h2>
+            <img src="../Frontend/html/media/bmw.jpg" height="300">
+            <figcaption>Parking</figcaption>
+            <br><br>
+            <img src="../Frontend/html/media/cheetah.jpg" height="300">
+            <figcaption>Wild life park</figcaption>
+            <br><br>
+            <p><b>Promotional Video:</b></p>
+            <video controls autoplay muted loop src="../Frontend/media/beach.mp4" width="300px"></video>
+            <br><br>
+            <p><b>Audio Clip:</b></p>
+            <audio controls src="../Frontend/media/andriig-guitar-solo-guitar-music-471272.mp3"></audio>
+        </section>
+        
+</body>
+</html>

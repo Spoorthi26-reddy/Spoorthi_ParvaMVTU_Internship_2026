@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .big{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-gap: 20px;
+            height: 500px;
+        }
+        .child{
+            background-color: antiquewhite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+        .layout-1{
+            grid-column: 1/2;
+            grid-row: 1/4;
+            background-color: green;
+        }
+        .layout-2{
+            grid-column:2/4;
+            background-color: green;
+        }
+        .layout-3{
+            grid-column: 4/6;
+            background-color: orange;
+        }
+        .layout-4{
+            grid-row:2/3 ;
+            background-color: red;
+        }
+        .layout-5{
+            grid-row: 3/4;
+            background-color: orange;
+
+        }
+        .layout-6{
+            grid-row: 3/4;
+            background-color: red;
+        }
+        .layout-7{
+            grid-area: 2/3;
+            background-color: orange;
+              
+        }
+        .layout-8{
+            grid-row:2/4;
+            grid-column:4/6;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="big">
+        <div class="child layout-1 ">layout 1</div>
+        <div class="child layout-2">layout 2</div>
+        <div class="child layout-3">layout 3</div>
+        <div class="child layout-4">layout 4</div>
+        <div class="child layout-5">layout 5</div>
+        <div class="child layout-6">layout 6</div>
+        <div class="child layout-7">layout 7</div>
+        <div class="child layout-8">layout 8</div>
+    </div>
+</body>
+</html>

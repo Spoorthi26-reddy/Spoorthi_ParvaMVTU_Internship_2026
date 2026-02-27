@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>student registration details</h1>
+
+
+
+
+    <script>
+        const students = [
+ { id: 1, name: "Rahul", marks: [80, 75, 90] },
+ { id: 2, name: "Sneha", marks: [60, 70, 65] },
+ { id: 3, name: "Arjun", marks: [95, 92, 88] }
+];
+
+function getTotal(marks) {
+ return marks.reduce(function(sum, mark) {
+  return sum + mark;
+ }, 0);
+}
+
+const getAverageGrade = (marks) => {
+
+ let total = getTotal(marks);
+ let avg = total / marks.length;
+
+ let grade;
+
+ if(avg >= 90) grade = "A";
+ else if(avg >= 75) grade = "B";
+ else if(avg >= 60) grade = "C";
+ else grade = "Fail";
+
+ return {total: total, average: avg, grade: grade};
+};
+
+const resultArray = students.map(function(student){
+
+ let data = getAverageGrade(student.marks);
+
+ return {
+  name: student.name,
+  total: data.total,
+  average: data.average,
+  grade: data.grade
+ };
+
+});
+
+const above75 = resultArray.filter(function(student){
+ return student.average > 75;
+});
+
+console.log("Students Above 75 Average:");
+console.log(above75);
+
+console.log("All Student Details:");
+
+resultArray.forEach(function(student){
+
+ console.log(
+  "Name:", student.name,
+  "| Total:", student.total,
+  "| Average:", student.average,
+  "| Grade:", student.grade
+ );
+
+});
+
+function scopeTest(){
+
+ let a = 10;
+ var b = 20;
+ const c = 30;
+
+ if(true){
+  let a = 100;
+  var b = 200;
+  const c = 300;
+
+  console.log("Inside Block:", a,b,c);
+ }
+
+ console.log("Outside Block:", a,b,c);
+
+}
+
+scopeTest();
+
+let num1 = 10;
+let num2 = num1;
+
+num2 = 50;
+
+console.log("Primitive Example:");
+console.log("num1 =", num1);
+console.log("num2 =", num2);
+
+let arr1 = [1,2,3];
+let arr2 = arr1;
+
+arr2[0] = 100;
+
+console.log("Reference Example:");
+console.log("arr1 =", arr1);
+console.log("arr2 =", arr2);
+    </script>
+    
+</body>
+</html>

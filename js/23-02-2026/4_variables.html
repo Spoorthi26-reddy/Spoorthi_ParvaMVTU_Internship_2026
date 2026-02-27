@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+</head>
+<body>
+    <h1>Variables in Javascript</h1>
+    <p>4 ways to create a variables</p>
+    <h3>1. Automatically</h3>
+    <h3>2. var Keyword - we can redeclare(not a block scope)</h3>
+    <h3>3. let keyword - we cannot redeclare but reinitialize (block scope)</h3>
+    <h3>4. const keyword -cannot redeclare or reinitialize(block scope=cannot change after the braces</h3>
+
+    <script>
+        //automatically
+        var first_name = "john";
+        console.log("first name is:" ,first_name);
+
+        //var
+        var last_name = "doe";
+        console.log("Last name is:" ,last_name);
+
+        //let
+        let age = "23";
+        console.log("Age is:" ,age);
+
+        //const
+        const pi = 3.14;
+        console.log("Pi:" ,pi);
+    </script>
+
+    <script>
+        //redeclaring variables
+
+        var gender ="M";
+        console.log("gender:", gender);
+        var gender ="F";
+        console.log("gender:", gender);
+
+        let marks=90;
+        console.log("marks :", marks);
+
+        marks=95;
+        console.log("marks :", marks);
+
+        const country = "India";
+        console.log("country:", country);
+
+        {
+            var city="bengaluru";
+            console.log("city:" ,city);
+        }
+        console.log("city:" ,city);
+
+        {
+            let state="goa";
+            console.log("state:" ,state);
+        }
+         console.log("state:" ,state);
+    </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //for loop
+        let i=5;
+        for(let j=1;j<=i;j++){
+            console.log(j);
+        }
+
+        for(let j=1;j<=10;j++){
+            console.log(`${i}*${j}=${i*j}`);
+        }
+
+        //for of loop
+        const arr =[10,20,30,40,50];
+        for(let value of arr){
+            console.log(value);
+        }
+
+        //for in loop
+        const student = {
+            "firstname":"ram",
+            "age":24
+        }
+        for(let key in student) {
+            console.log(`${key}:${student[key]}`);
+        }
+    </script>
+</body>
+</html>

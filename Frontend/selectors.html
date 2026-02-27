@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .div1{
+            background-color: aqua;
+            position: sticky;
+            top: 30px;
+        }
+        #para1{
+            color: red;
+        }
+        
+        p{
+            color: blueviolet;
+        }
+        span{
+            display: block;
+            height: 100px;
+            width: 100px;
+            background-color: blueviolet;
+        }
+        .in{
+            display: inline;
+            background-color: brown;
+        }
+        .hello{
+            display: inline-block;
+            width: 100px;
+            height:100px;
+            background-color: blanchedalmond;
+            
+        }
+        #div{
+            display: none;
+        }
+        .container{
+            display: flex;
+           
+            justify-content: space-evenly;
+        }
+        .hii{
+            background-color: aqua;
+            height: 100px;
+            width: 100px;
+        }
+
+        #static{
+            position: static;
+            background-color: aqua;
+        }
+
+        #relative{
+            position: relative;
+            left: 40px;
+            top:50px;
+            background-color: blueviolet;
+            border: 2px solid black;
+            height: 100px;
+        }
+        .absolute{
+            position: relative;
+            top: 50px;
+            left: 80px;
+            background-color: brown;
+            border: 2px solid black;
+            height: 200px;
+        }
+        #child1{
+            position: absolute;
+          /* top: 100px;
+            left: 50px;*/ 
+            padding:90px;
+        }
+        .class{
+            position: fixed;
+            bottom: 40px;
+            height: 50px;
+            width: 50px;
+            background-color: chartreuse;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>Selectors in html</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, dolore?</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+
+    <div class="div1">Lorem, ipsum dolor.</div>
+    <div class="div1">Lorem, ipsum dolor.</div>
+
+    <p id="para1">Lorem ipsum dolor sit amet.</p>
+    <p id="para2">Lorem ipsum dolor sit amet.</p>
+    <p id="para3">Lorem ipsum dolor sit amet.</p>
+    <p id="para4">Lorem ipsum dolor sit amet.</p>
+
+    <h3>element types</h3>
+    <p>1.block elements . example=h1 to h6 ,p div</p>
+    <p>2.inline elements . example=span,a,em</p>
+
+    <p>display:it will control how a html element id displayed</p>
+    <pre>
+        selector{
+            dispaly:value;
+        }
+    
+    <h1>1.display:block</h1>
+    <span>hello</span>
+    <span>world</span>
+</pre>
+    <h1>2.display:inline</h1>
+    <div class="in">this is a</div>
+    <div class="in">table</div>
+
+    <h3>3.display:inline-block</h3>
+    <p>similar to inline but we can add height and width</p>
+
+    <div class="hello">hello</div>
+    <div class="hello">world</div>
+
+    <p>display:none = this will hide the html elements</p>
+    <div id="div">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus ipsam consectetur neque culpa quos, sed dolore consequatur vero possimus inventore?</div>
+    <div class="container">
+    <div class="hii">helo1</div>
+    <div class="hii">helo2</div>
+    <div class="hii">helo3</div>
+    </div>
+
+
+    <hr>
+    <br>
+
+    <h1>Position property</h1>
+    <p>used to control the position od=f the elements</p>
+    <pre>
+        1.position:static-default positon of html elemnts(we cannot use top,right,bottom,left)
+        2.position:relative-it help to change the position from the original position
+        3.position:absolute- this will position the element from nearest positioned ansestor
+        4.position:fixed-it will fix the html element.
+        5.position:sticky- it will stick the html elemnet when we scroll the page
+    </pre>
+
+    <div id="static">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, atque?</div>
+
+    <div id="relative">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis, accusamus?</div>
+    <br>
+    
+    <div class="absolute">
+        <div id="child1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi, doloremque.</div>
+    </div>
+
+    <div class="class">
+        <p>Lorem, ipsum.</p>
+    </div>
+
+
+
+    
+    
+
+</body>
+</html>

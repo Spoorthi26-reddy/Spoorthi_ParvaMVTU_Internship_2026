@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>function amd block scope</h1>
+    <p>1. block scope-{}=let and const</p>
+    <p>2. function scope=var</p>
+</body>
+<script>
+    function fun(){
+        let a=100;
+        var b=300;
+        const c=400;
+        if(true){
+            let a =300;
+            var b=100;
+            const c=500;
+            console.log("inside values:",a,b,c);
+
+        }
+        console.log("outside values:",a,b,c);
+    }
+    fun();
+</script>
+</html>

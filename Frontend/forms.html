@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Registration form</h1>
+    <forms>
+        <label for="first name">First Name:</label>
+        <input type="text" name="first name" id="firstname" placeholder="enter your first name">
+        <label for="last name">Last Name:</label>
+        <input type="text" name="last name" id="lastname" placeholder="enter your last name">
+        <br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" placeholder="enter your email">
+        <br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" name="passwoed" id="password" placeholder="enter your password">
+        <br><br>
+
+        <label for="age">Age:</label>
+        <input type="number" name="age" id="age"  min="0" max="100" placeholder="Enter your age">
+        <br><br>
+
+        <label for="dob">Date of birth:</label>
+        <input type="date" name="dob" id="dob" min="2000-01-01" max="2026-02-06">
+        <br><br>
+
+        <label for="address">Address:</label>
+        <textarea rows="10" column="10" name="address" id="address" placeholder="Enter your address"></textarea>
+        <br><br>
+
+        <label for="gender">Gender:</label>
+        <input type="radio" name="gender" id="male" value="male">
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="female" value="female">
+        <label for="male">Female</label>
+        <br><br>
+
+        <label for="hobbies">Hobbies:</label>
+        <input type="checkbox" name="hobbies" id="singing" value="singing">
+        <label for="singing">Singing</label>
+        <input type="checkbox" name="hobbies" id="dancing" value="dancing">
+        <label for="singing">Dancing</label>
+        <input type="checkbox" name="hobbies" id="travelling" value="travelling">
+        <label for="singing">Travelling</label>
+        <br><br>
+
+        <!-- <label for="state">States:</label>
+        <select name="state" id="state" multiple>
+        <option value="KA">Karnataka</option>
+        <option value="TN">Tamil nadu</option>
+        <option value="GOA">Goa</option>
+        <option value="KE">Kerala</option>
+    </select>
+    <br><br> -->
+
+    <label for="state">States:</label>
+    <select name="state" id="state" multiple>
+            <option value="KA">Karnataka</option>
+            <option value="TN">Tamil Nadu</option>
+            <option value="MH" selected>Maharashtra</option>
+            <option value="GJ">Gujarat</option>
+            <option value="KL">Kerala </option>
+        </select><br><br>
+
+        <label for="photo">Upload photo:</label>
+        <input type="file" name="photo" id="photo" accept="image/* multiple">
+        <br><br>
+
+        <label for=rating>Rating:</label>
+        <input type="range" name="rating" id="rating" min="1" max="5" value="5">
+        <br><br>
+
+        <input type="reset" name="reset" id="reset">
+        <input type="submit" name="submit" id="submit">
+
+
+
+
+
+    </forms>
+</body>
+</html>

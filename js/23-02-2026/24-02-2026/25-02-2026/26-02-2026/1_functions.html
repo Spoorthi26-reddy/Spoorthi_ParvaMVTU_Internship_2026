@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Functions in JS</h1>
+    <p>1. function declaration</p>
+    <pre>
+        function fun_name(parameters){
+            //code 
+        }
+        fun_name(args);
+    </pre>
+    <p>2. function expression</p>
+    <pre>
+        const fun_name = function(parameterts){
+            //code
+        }
+        fun_name(args);
+
+    </pre>
+    <p>3. arrow function</p>
+    <pre>
+        const fun_name = parameters =>{
+            //code
+        }
+        fun_name(args);
+    </pre>
+</body>
+<script>
+    //function declaration
+    function addition(a,b){
+        return a+b;
+    }
+    res = addition(10,20);
+    console.log("addition:", res);
+
+    function substraction(a,b){
+        console.log("substraction:",a-b);
+    }
+    substraction(10,4);
+
+     
+
+    function multiplication(){
+        return 10*3;
+    }
+    res1 = multiplication();
+    console.log("multiplication:", res1);
+
+    function division(){
+        console.log("division:", 100/5);
+    }
+    division();
+    </script>
+
+
+    <script>
+    //function expression
+    const add = function (a,b){
+        return a+b;
+    }
+    const res=add(10,20);
+    console.log("add:", res);
+
+    const sub = function (a,b){
+        console.log("sub:", (a-b));
+    }
+    sub(10,5);
+
+    const mul = function () {
+        return 10*30;
+    }
+    const res1 =mul();
+    console.log("mul:", res1);
+
+    const div = function () {
+        console.log("div:", 10/5)
+    }
+    div();
+
+</script>
+
+<script>
+    
+
+</script>
+</html>
