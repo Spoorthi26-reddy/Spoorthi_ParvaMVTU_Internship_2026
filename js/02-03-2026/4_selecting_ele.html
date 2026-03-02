@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- id -->
+    <p id="p_tag1">Lorem, ipsum dolor.  id</p>
+
+    <!-- class -->
+    <p class="p_tag">Lorem ipsum dolor sit amet.  class</p>
+    <p class="p_tag">Lorem ipsum dolor sit amet.  class</p>
+
+    <!-- queryselector -->
+     <p id="p_tag2">Lorem, ipsum dolor.  id</p>
+
+     <!-- queryselector all -->
+       <p class="p_tag3">Lorem ipsum dolor sit amet.  class</p>
+    <p class="p_tag3">Lorem ipsum dolor sit amet.  class</p>
+
+    <script>
+        document.getElementById("p_tag1").style.color = "red";
+
+        const classes = document.getElementsByClassName("p_tag");
+        classes[0].style.color = "green";
+        console.log(classes);
+
+        const tags = document.getElementsByTagName("p");
+        console.log(tags);
+
+        //query selector
+        document.querySelector("#p_tag2").style.background = "lightblue";
+
+        const query_classes =document.querySelectorAll(".p_tag3");
+        console.log(query_classes);
+    </script>
+
+
+</body>
+</html>

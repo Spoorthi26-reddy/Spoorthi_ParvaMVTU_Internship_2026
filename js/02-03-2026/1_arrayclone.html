@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Array clone</h1>
+    <p>1 spread</p>
+    <p>2 slice</p>
+    <p>3 concat</p>
+    <script>
+        const arr1 = [1,2,3,4,5,6];
+
+        const arr2 = [...arr1];
+        arr1[4] = 600;
+        console.log("array1:" ,arr1);
+        console.log("array2:" ,arr2);
+
+        const arr3 = arr1.slice(0);
+        arr1[1]=100;
+        console.log("array1:" ,arr1);
+        console.log("array3:" ,arr3);
+
+        const arr4 = [].concat(arr1);
+        arr1[2] = 200;
+        console.log("array1:" ,arr1);
+        console.log("array4:" ,arr4);
+
+
+    </script>
+</body>
+</html>

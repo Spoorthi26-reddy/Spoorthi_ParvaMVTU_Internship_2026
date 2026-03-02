@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>optional chaining</h1>
+    <p>To overcome the problem of type error go for(ternary operator) = ?. </p>
+
+    <script>
+        let a = 500;
+        let b = 400;
+        let res = (a>b) ? true : false;
+        console.log(res);
+
+        const obj1 = {
+            name:"Ram",
+            age: 21,
+            address:{
+                city:"bengaluru",
+                state:"karnataka",
+                country:"India"
+            },
+            marks: [45,55,67,87,89],
+            isWorking:() => {
+                console.log("yes he is working");
+            }
+        }
+        console.log(obj1);
+        console.log("name", obj1.name);
+        console.log("country", obj1.address.country);
+        console.log("country", obj1?.address1?.country);
+        console.log("marks", obj1?.marks1?.[4]);
+        
+
+    </script>
+</body>
+</html>

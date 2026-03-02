@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h3>Student Form</h3>
+
+Name:
+<input type="text" id="name"><br><br>
+
+Age:
+<input type="text" id="age"><br><br>
+
+<button onclick="addStudent()">Add</button>
+<button onclick="showStudent()">Read</button>
+<button onclick="updateStudent()">Update</button>
+<button onclick="deleteStudent()">Delete</button>
+
+<script>
+
+let student = {};
+
+function addStudent(){
+student.name = document.getElementById("name").value;
+student.age = document.getElementById("age").value;
+console.log("Added:",student);
+}
+
+function showStudent(){
+console.log("Student:",student);
+}
+
+function updateStudent(){
+student.name = document.getElementById("name").value;
+student.age = document.getElementById("age").value;
+console.log("Updated:",student);
+}
+
+function deleteStudent(){
+student = {};
+console.log("Deleted");
+}
+
+</script>
+
+</body>
+</html>
