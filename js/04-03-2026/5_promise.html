@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>promise in JS</h1>
+    <p>Promise is a future value either it will be resolved or rejected</p>
+
+    <pre>
+        const promise = new Promise((resolved , rejected)=>{
+            //code 
+        });
+
+        //handelling promise
+
+        promise.then(() => {
+            //code 
+        }).then((data) => {
+            //code
+        }).catch((err) => {
+            //code
+        })
+
+    </pre>
+
+    <script>
+        const promise = new Promise((resolved, rejected) => {
+            if (var1) {
+                return resolved("It is resolved");
+            }else {
+                return rejected("It is rejected");
+            }
+        });
+
+        promise.then((data) => {
+            console.log(data);
+        }).catch((err) => {
+            console.log("error is",err);
+        }) 
+
+        const fun4 = (message, time) => {
+            return new Promise((resolved,rejected) => {
+                setTimeout(() => {
+                    resolved(message);
+                },time);
+            })
+        }
+        fun4("1",1000)
+        .then((data)=> {
+            console.log(data);
+            return fun4("2",1000);
+        }).then((data) => {
+            console.log(data);
+            return fun4("3",1000);
+        }).then((data)=>{
+            console.log(data);
+        })
+        .catch((err)=> {
+        console.log("error is:",err)
+        })
+        
+
+    </script>
+</body>
+</html>

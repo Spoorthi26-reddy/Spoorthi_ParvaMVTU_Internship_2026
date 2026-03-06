@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100vh;
+            height: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+        }
+        #btn{
+            width: 200px;
+            padding: 8px 0px;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            background-color: rgb(236, 167, 119);
+            cursor: pointer;
+            
+        }
+        #btn:hover{
+            background-color: chocolate;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+<div class="container">
+    <h2>Async JS project</h2>
+    <p id="date-time"></p>
+
+    <button type="button" id="btn">Stop</button>
+</div>
+
+    <script>
+        const color = setInterval(() => {
+            const red = Math.floor(Math.random()* 256);
+            const green = Math.floor(Math.random()* 256);
+            const blue = Math.floor(Math.random()* 256);
+            const backGroundColor = `rgb(${red}, ${green} ,${blue})`;
+            document.body.style.backgroundColor = backGroundColor;
+        }, 1000);
+
+        setInterval(() => {
+            const dateTime = document.getElementById("date-time");
+            dateTime.innerText= new Date();
+        },1000);
+
+
+            const btn = document.getElementById("btn");
+            btn.addEventListener("click", () => {
+                clearInterval(color);
+                btn.innerText = document.body.style.backgroundColor;
+            });
+        
+    </script>
+
+</html>

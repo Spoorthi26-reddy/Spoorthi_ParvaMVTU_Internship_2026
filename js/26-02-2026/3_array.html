@@ -51,7 +51,7 @@
     console.log("Index is:",index);
 
     //forEach
-    const arr1 = [1, 2.3, true, "world", {name: "eam"}];
+    const arr1 = [1, 2.3, true, "world", {name: "ram"}];
     arr1.forEach((ele, index, arr2) => {
         console.log("Ele:", ele, "index:", index, "array:",arr2);
 
@@ -63,17 +63,19 @@
         return ele * ele;
     })
     console.log("Array3: ", arr3);
+    
 
     //filter
     const arr4 = [1,2,3,4,5,6,7,8,9,10];
     const arr5 = arr4.filter((ele) => {
         return ele % 2 ==0;
     })
+    console.log("filter",arr5);
 
     //reduce
     const res6 = arr4.reduce((pre, cur) => {
         return pre + cur;
-    },10);
+    },30);
     console.log("res6:", res6);
 </script>
 </html>

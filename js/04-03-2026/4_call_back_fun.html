@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>callback in js</h1>
+    <p>call back is a function tht is passed as parameter to another function</p>
+    <p>callback hell - to overcome this we use promise</p>
+
+    <script>
+        const fun1 = (fun2) => {
+            console.log("First function");
+            fun2();
+        }
+        const fun2=()=>{
+            console.log("second function");
+        }
+        fun1(fun2);
+
+        // use set timeout - callback hell
+        setTimeout(() =>{
+            console.log("1");
+            setTimeout(()=>{
+                console.log("2");
+                setTimeout(() => {
+                    console.log("3");
+                    setTimeout(() => {
+                        console.log("4");
+                        setTimeout(() =>{
+                            console.log("5");
+                            setTimeout(() => {
+                                console.log("6");
+                            },1000)
+                        },1000)
+                    },1000)
+                },1000)
+            },1000)
+        },1000)
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>set interval v/s set timeout</h1>
+
+    <script>
+       console.log("first");
+
+        setTimeout(() => {
+            console.log("setTimeout called");
+        },5000);
+
+        console.log("second");
+
+        setInterval(() => {
+            console.log("setInterval called");
+        },1000);
+
+        console.log("third");
+
+    </script>
+</body>
+</html>

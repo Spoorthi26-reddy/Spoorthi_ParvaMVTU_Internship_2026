@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To-Do List App</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body{
+            background-color:#f4f4f4;
+        }
+
+        .todo-container{
+            max-width:600px;
+            margin:auto;
+            margin-top:50px;
+            background:white;
+            padding:25px;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .completed{
+            text-decoration: line-through;
+            color: gray;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="todo-container">
+
+        <h2 class="text-center mb-4">To-Do List</h2>
+
+        <!-- Input -->
+        <div class="input-group mb-3">
+            <input type="text" id="taskInput" class="form-control" placeholder="Enter a task">
+            <button class="btn btn-primary" onclick="addTask()">Add Task</button>
+        </div>
+
+        <!-- Task List -->
+        <ul class="list-group" id="taskList"></ul>
+
+    </div>
+</div>
+
+<script>
+
+function addTask(){
+
+    let taskInput = document.getElementById("taskInput");
+    let taskText = taskInput.value.trim();
+
+    if(taskText === ""){
+        alert("Please enter a task");
+        return;
+    }
+
+    let li = document.createElement("li");
+    li.className = "list-group-item d-flex justify-content-between align-items-center";
+
+    let span = document.createElement("span");
+    span.innerText = taskText;
+
+    // mark as completed
+    span.onclick = function(){
+        span.classList.toggle("completed");
+    }
+
+    // delete button
+    let deleteBtn = document.createElement("button");
+    deleteBtn.className = "btn btn-danger btn-sm";
+    deleteBtn.innerText = "Delete";
+
+    deleteBtn.onclick = function(){
+        li.remove();
+    }
+
+    li.appendChild(span);
+    li.appendChild(deleteBtn);
+
+    document.getElementById("taskList").appendChild(li);
+
+    taskInput.value = "";
+}
+
+</script>
+
+</body>
+</html>

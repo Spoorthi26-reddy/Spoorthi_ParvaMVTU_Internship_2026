@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" placeholder="enter your name">
+        <br><br>
+         <label for="email">email:</label>
+        <input type="email" name="email" id="email" placeholder="enter your email">
+        <br><br>
+         <label> gender:</label>
+         
+        <input type="radio" name="gender" id="male">
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="female">
+        <label for="female">female</label>
+        <br><br>
+        <label for="city">City:</label>
+        <select name="city" id="city">
+            <option value="bengaluru">bengaluru</option>
+            <option value="mumbai">mumbai</option>
+        </select>
+        <br><br>
+        <button type="submit">submit</button>
+       <br><br>
+    </form>
+    <script>
+        //input
+        <!-- const name=document.getElementById("name");
+        name.addEventListener("input",(event)=>{
+            console.log(event.target.value);
+        }) -->
+
+        //blur
+        const email= document.querySelector("#email");
+        email.addEventListener("blur",(event) => {
+            console.log("Blur event trigger value is:", event.target.value);
+        });
+
+        //change
+        const city = document.getElementById("city");
+        city.addEventListener("change",(e) => {
+            console.log("city value changes:", e.target.value);
+        });
+
+        //focus
+        const name= document.querySelector("#name");
+        name.addEventListener("focus", () => {
+            console.log("Name input field focus");
+        });
+
+        //submit
+        const contactForm = document.querySelector("#contact-form");
+        contactForm.addEventListener("submit" , (e) => {
+            e.preventDefault();
+            console.log("form is submitted");
+        })
+    </script>
+</body>
+</html>

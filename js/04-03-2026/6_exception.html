@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>exception handelling</h1>
+    <p>try , catch , finally</p>
+    <p>finally - whenever exception occur or not this will execute by default . ex-dbconnection , file close</p>
+<script>
+    console.log(10/2);
+    console.log(2/10);
+    try{
+        const obj={
+            name:"spoorthi"
+        }
+        console.log(obj.name);
+    }catch(error){
+        console.log(error);
+
+    }finally{
+        console.log("closing resources");
+    }
+
+    console.log("3");
+    console.log("4");
+</script>
+</body>
+</html>
