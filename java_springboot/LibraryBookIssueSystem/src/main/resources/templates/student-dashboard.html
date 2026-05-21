@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Student Dashboard</title>
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        body {
+            background: #f4f6fb;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background: #111827;
+            color: white;
+            position: fixed;
+            padding: 25px 20px;
+        }
+
+        .sidebar h3 {
+            font-size: 22px;
+            margin-bottom: 35px;
+        }
+
+        .sidebar a, .logout-btn {
+            display: block;
+            color: #d1d5db;
+            text-decoration: none;
+            padding: 13px;
+            border-radius: 12px;
+            margin-bottom: 10px;
+            border: none;
+            background: none;
+            width: 100%;
+            text-align: left;
+        }
+
+        .sidebar a:hover, .logout-btn:hover {
+            background: #2563eb;
+            color: white;
+        }
+
+        .main {
+            margin-left: 270px;
+            padding: 30px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #4f46e5, #2563eb);
+            color: white;
+            border-radius: 25px;
+            padding: 35px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            border: none;
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            background: white;
+            height: 100%;
+        }
+
+        .icon-box {
+            width: 55px;
+            height: 55px;
+            border-radius: 15px;
+            background: #eef2ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .section-card {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        }
+
+        .search-box {
+            border-radius: 14px;
+            padding: 13px;
+        }
+
+        .quick-btn {
+            border-radius: 14px;
+            padding: 12px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <h3>
+        <i class="fa-solid fa-book"></i>
+        Student Panel
+    </h3>
+
+    <a th:href="@{/student/dashboard}">
+        <i class="fa-solid fa-house"></i> Dashboard
+    </a>
+
+    <a th:href="@{/student/books}">
+        <i class="fa-solid fa-book-open"></i> Explore Books
+    </a>
+
+    <a th:href="@{/student/history}">
+        <i class="fa-solid fa-clock-rotate-left"></i> My Borrow History
+    </a>
+
+    <form th:action="@{/logout}" method="post">
+        <button type="submit" class="logout-btn text-danger">
+            <i class="fa-solid fa-right-from-bracket"></i> Logout
+        </button>
+    </form>
+
+</div>
+
+<div class="main">
+
+    <div class="hero">
+        <h2>Welcome Student 👋</h2>
+        <p class="mb-0">
+            Explore books, track issued books, check due dates, and view your library activity.
+        </p>
+    </div>
+
+    <div class="row g-4 mb-4">
+
+        <div class="col-md-3">
+            <div class="stat-card">
+                <div class="icon-box">📚</div>
+                <h3 th:text="${totalBooks}">20</h3>
+                <p>Total Books</p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="stat-card">
+                <div class="icon-box">📖</div>
+                <h3 th:text="${issuedBooks}">3</h3>
+                <p>Issued Books</p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="stat-card">
+                <div class="icon-box">✅</div>
+                <h3 th:text="${returnedBooks}">5</h3>
+                <p>Returned Books</p>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="stat-card">
+                <div class="icon-box">₹</div>
+                <h3 th:text="${pendingFine}">0</h3>
+                <p>Pending Fine</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row g-4">
+
+        <div class="col-md-8">
+            <div class="section-card">
+
+                <h4 class="mb-3">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    Search Books
+                </h4>
+
+                <form th:action="@{/student/books}" method="get">
+                    <input type="text"
+                           name="keyword"
+                           class="form-control search-box mb-3"
+                           placeholder="Search by book title, author, or category...">
+                    <button class="btn btn-primary quick-btn">
+                        Search Book
+                    </button>
+                </form>
+
+                <hr>
+
+                <h4 class="mb-3">Quick Actions</h4>
+
+                <div class="row g-3">
+
+                    <div class="col-md-6">
+                        <a th:href="@{/student/books}"
+                           class="btn btn-outline-primary w-100 quick-btn">
+                            Explore Available Books
+                        </a>
+                    </div>
+
+                    <div class="col-md-6">
+                        <a th:href="@{/student/history}"
+                           class="btn btn-outline-success w-100 quick-btn">
+                            View Borrow History
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="section-card">
+
+                <h4 class="mb-3">
+                    <i class="fa-solid fa-bell"></i>
+                    Notifications
+                </h4>
+
+                <div class="alert alert-info">
+                    Check your due dates regularly.
+                </div>
+
+                <div class="alert alert-warning">
+                    Return books before due date to avoid fines.
+                </div>
+
+                <div class="alert alert-success">
+                    New books are available in the library.
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

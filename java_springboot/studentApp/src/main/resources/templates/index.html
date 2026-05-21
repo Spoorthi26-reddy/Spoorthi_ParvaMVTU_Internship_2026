@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Students</title>
+</head>
+<body>
+<h2>Students</h2>
+
+<a href="/new">Add Student</a>
+
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Courses</th>
+        <th>Action</th>
+    </tr>
+    <tr th:each="s : ${students}">
+        <td th:text="${s.id}"></td>
+        <td th:text="${s.name}"></td>
+        <td th:text="${s.email}"></td>
+        
+        <!-- Courses column -->
+        <td>
+            <span th:each="c, iterStat : ${s.courses}" 
+                  th:text="${c.title} + (${!iterStat.last} ? ', ' : '')"></span>
+        </td>
+        
+        <!-- Action column with delete + add course form -->
+        <td>
+        <a th:href="@{/edit/{id}(id=${s.id})}">Edit</a>
+            <a th:href="@{/delete/{id}(id=${s.id})}">Delete</a>
+            
+            
+            <form th:action="@{/addCourse/{id}(id=${s.id})}" method="post" style="display:inline;">
+                <input type="text" name="title" placeholder="Course name" required/>
+                <button type="submit">Add Course</button>
+            </form>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

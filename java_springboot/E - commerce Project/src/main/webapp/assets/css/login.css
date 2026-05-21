@@ -1,0 +1,530 @@
+@charset "UTF-8";
+
+/* =========================================
+   GOOGLE FONT
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+
+
+
+/* =========================================
+   GLOBAL
+========================================= */
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+    font-family:'Poppins',sans-serif;
+}
+
+
+
+
+
+body{
+
+    background:#f5f5f7;
+}
+
+
+
+
+
+/* =========================================
+   LOGIN PAGE
+========================================= */
+
+.login-section{
+
+    min-height:100vh;
+
+    background:
+    linear-gradient(
+    135deg,
+    #f5f5f7,
+    #ececff);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:60px 20px;
+}
+
+
+
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.login-container{
+
+    width:100%;
+
+    max-width:1300px;
+
+    background:white;
+
+    border-radius:32px;
+
+    overflow:hidden;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    box-shadow:
+    0 20px 60px rgba(0,0,0,0.08);
+
+    min-height:700px;
+}
+
+
+
+
+
+/* =========================================
+   LEFT SIDE
+========================================= */
+
+.login-banner{
+
+    background:
+    linear-gradient(
+    135deg,
+    #6C4DF6,
+    #8E7BFF);
+
+    color:white;
+
+    padding:80px 70px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    position:relative;
+}
+
+
+
+
+
+.login-banner::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:300px;
+
+    height:300px;
+
+    background:
+    rgba(255,255,255,0.1);
+
+    border-radius:50%;
+
+    top:-80px;
+
+    right:-80px;
+}
+
+
+
+
+
+.login-banner::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+
+    height:220px;
+
+    background:
+    rgba(255,255,255,0.08);
+
+    border-radius:50%;
+
+    bottom:-60px;
+
+    left:-60px;
+}
+
+
+
+
+
+.login-banner h1{
+
+    font-size:64px;
+
+    margin-bottom:25px;
+
+    font-weight:700;
+
+    z-index:2;
+}
+
+
+
+
+
+.login-banner p{
+
+    font-size:20px;
+
+    line-height:1.9;
+
+    color:rgba(255,255,255,0.92);
+
+    z-index:2;
+}
+
+
+
+
+
+/* =========================================
+   RIGHT SIDE
+========================================= */
+
+.login-form-container{
+
+    padding:70px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+}
+
+
+
+
+
+.login-form-container h2{
+
+    font-size:46px;
+
+    margin-bottom:45px;
+
+    color:#111;
+
+    font-weight:700;
+}
+
+
+
+
+
+/* =========================================
+   FORM GROUP
+========================================= */
+
+.form-group{
+
+    margin-bottom:28px;
+}
+
+
+
+
+
+.form-group label{
+
+    display:block;
+
+    margin-bottom:12px;
+
+    font-weight:600;
+
+    color:#222;
+
+    font-size:15px;
+}
+
+
+
+
+
+/* =========================================
+   INPUTS
+========================================= */
+
+.form-group input{
+
+    width:100%;
+
+    padding:18px 22px;
+
+    border:1px solid #e2e2e2;
+
+    border-radius:18px;
+
+    outline:none;
+
+    font-size:16px;
+
+    background:#fafafa;
+
+    transition:0.3s ease;
+}
+
+
+
+
+
+.form-group input:focus{
+
+    border-color:#6C4DF6;
+
+    background:white;
+
+    box-shadow:
+    0 0 0 5px
+    rgba(108,77,246,0.12);
+}
+
+
+
+
+
+/* =========================================
+   PASSWORD TOGGLE
+========================================= */
+
+.password-wrapper{
+
+    position:relative;
+
+    width:100%;
+}
+
+
+
+
+
+.password-wrapper input{
+
+    width:100%;
+
+    padding-right:60px;
+}
+
+
+
+
+
+.toggle-password{
+
+    position:absolute;
+
+    right:22px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    cursor:pointer;
+
+    color:#777;
+
+    font-size:18px;
+
+    transition:0.3s ease;
+}
+
+
+
+
+
+.toggle-password:hover{
+
+    color:#6C4DF6;
+}
+
+
+
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.login-btn{
+
+    width:100%;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:
+    linear-gradient(
+    135deg,
+    #6C4DF6,
+    #7E61FF);
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:0.35s ease;
+
+    margin-top:15px;
+
+    box-shadow:
+    0 10px 25px rgba(108,77,246,0.28);
+}
+
+
+
+
+
+.login-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 16px 35px rgba(108,77,246,0.35);
+}
+
+
+
+
+
+/* =========================================
+   REGISTER LINK
+========================================= */
+
+.register-link{
+
+    margin-top:30px;
+
+    text-align:center;
+
+    color:#555;
+
+    font-size:15px;
+}
+
+
+
+
+
+.register-link a{
+
+    color:#6C4DF6;
+
+    font-weight:700;
+
+    text-decoration:none;
+}
+
+
+
+
+
+.register-link a:hover{
+
+    text-decoration:underline;
+}
+
+
+
+
+
+/* =========================================
+   ERROR MESSAGE
+========================================= */
+
+.error-message{
+
+    background:#fff0f0;
+
+    color:#ff3b3b;
+
+    padding:16px 18px;
+
+    border-radius:16px;
+
+    margin-bottom:28px;
+
+    font-size:14px;
+
+    border:
+    1px solid #ffd6d6;
+}
+
+
+
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width:992px){
+
+    .login-container{
+
+        grid-template-columns:1fr;
+    }
+
+    .login-banner{
+
+        display:none;
+    }
+
+    .login-form-container{
+
+        padding:50px 35px;
+    }
+}
+
+
+
+
+
+@media(max-width:768px){
+
+    .login-form-container h2{
+
+        font-size:36px;
+    }
+
+    .form-group input{
+
+        padding:16px 18px;
+    }
+
+    .login-btn{
+
+        padding:16px;
+    }
+}

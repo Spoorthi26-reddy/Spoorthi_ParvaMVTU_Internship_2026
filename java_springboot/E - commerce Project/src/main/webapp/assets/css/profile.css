@@ -1,0 +1,336 @@
+@charset "UTF-8";
+/* ========================================= */
+/* PROFILE SECTION */
+/* ========================================= */
+
+.profile-section{
+
+    padding:60px 0;
+
+    background:#f5f5f7;
+
+    min-height:100vh;
+}
+
+
+
+
+
+/* ========================================= */
+/* TITLE */
+/* ========================================= */
+
+.profile-title{
+
+    font-size:40px;
+
+    font-weight:700;
+
+    margin-bottom:40px;
+
+    color:#222;
+}
+
+
+
+
+
+/* ========================================= */
+/* PROFILE CARD */
+/* ========================================= */
+
+.profile-card{
+
+    background:white;
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    display:grid;
+
+    grid-template-columns:
+    320px 1fr;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,0.06);
+}
+
+
+
+
+
+/* ========================================= */
+/* LEFT */
+/* ========================================= */
+
+.profile-left{
+
+    background:#6C4DF6;
+
+    color:white;
+
+    padding:50px 30px;
+
+    text-align:center;
+}
+
+
+
+
+
+.profile-avatar{
+
+    width:120px;
+
+    height:120px;
+
+    background:white;
+
+    color:#6C4DF6;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin:auto auto 25px;
+}
+
+
+
+
+
+.profile-avatar i{
+
+    font-size:50px;
+}
+
+
+
+
+
+.profile-left h2{
+
+    font-size:28px;
+
+    margin-bottom:12px;
+}
+
+
+
+
+
+.profile-left p{
+
+    opacity:0.9;
+
+    font-size:15px;
+}
+
+
+
+
+
+/* ========================================= */
+/* RIGHT */
+/* ========================================= */
+
+.profile-right{
+
+    padding:50px;
+}
+
+
+
+
+
+/* ========================================= */
+/* FORM */
+/* ========================================= */
+
+.form-group{
+
+    margin-bottom:25px;
+}
+
+
+
+
+
+.form-group label{
+
+    display:block;
+
+    margin-bottom:10px;
+
+    font-weight:600;
+
+    color:#333;
+}
+
+
+
+
+
+.form-group input,
+.form-group textarea{
+
+    width:100%;
+
+    padding:16px;
+
+    border:1px solid #ddd;
+
+    border-radius:12px;
+
+    font-size:15px;
+
+    outline:none;
+
+    transition:0.3s;
+}
+
+
+
+
+
+.form-group textarea{
+
+    resize:none;
+
+    min-height:120px;
+}
+
+
+
+
+
+.form-group input:focus,
+.form-group textarea:focus{
+
+    border-color:#6C4DF6;
+}
+
+
+
+
+
+/* ========================================= */
+/* BUTTON */
+/* ========================================= */
+
+.update-btn{
+
+    background:#6C4DF6;
+
+    color:white;
+
+    border:none;
+
+    padding:16px 30px;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+
+
+
+
+.update-btn:hover{
+
+    background:#5538db;
+}
+
+
+
+
+
+/* ========================================= */
+/* SUCCESS */
+/* ========================================= */
+
+.success-message{
+
+    background:#e9f8ee;
+
+    color:#1b9c4b;
+
+    padding:14px 18px;
+
+    border-radius:10px;
+
+    margin-bottom:25px;
+
+    font-weight:600;
+}
+
+
+
+
+
+/* ========================================= */
+/* ERROR */
+/* ========================================= */
+
+.error-message{
+
+    background:#ffecec;
+
+    color:#d63031;
+
+    padding:14px 18px;
+
+    border-radius:10px;
+
+    margin-bottom:25px;
+
+    font-weight:600;
+}
+
+
+
+
+
+/* ========================================= */
+/* RESPONSIVE */
+/* ========================================= */
+
+@media(max-width:992px){
+
+    .profile-card{
+
+        grid-template-columns:1fr;
+    }
+}
+
+
+
+
+
+@media(max-width:768px){
+
+    .profile-right{
+
+        padding:30px;
+    }
+
+
+
+    .profile-title{
+
+        font-size:32px;
+    }
+
+}
